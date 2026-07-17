@@ -2,13 +2,24 @@ function addStudent() {
 
     let name = document.getElementById("studentName").value;
 
-    if(name !== "") {
+    if (name !== "") {
 
         let li = document.createElement("li");
-        li.innerText = name;
+
+        li.innerHTML =
+            name +
+            ' <button onclick="this.parentElement.remove(); updateCount()">Delete</button>';
 
         document.getElementById("studentList").appendChild(li);
 
+        updateCount();
+
         document.getElementById("studentName").value = "";
     }
+}
+
+function updateCount() {
+    document.getElementById("studentList").children.length;
+    document.getElementById("count").innerText =
+        document.getElementById("studentList").children.length;
 }
