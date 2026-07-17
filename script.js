@@ -19,6 +19,7 @@ function addStudent() {
 }
 
 function updateCount() {
+    document.getElementById("studentList").children.length;
     document.getElementById("count").innerText =
         document.getElementById("studentList").children.length;
 }
