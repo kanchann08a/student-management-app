@@ -9,6 +9,10 @@ function addStudent() {
 
         document.getElementById("studentList").appendChild(li);
 
+        // Update total student count
+        document.getElementById("count").innerText =
+            document.getElementById("studentList").children.length;
+
         document.getElementById("studentName").value = "";
     }
 }
